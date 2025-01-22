@@ -11,8 +11,6 @@ SELECT SUM(Weight) AS TotalWeight FROM SalesLT.PRODUCT;
 
 SELECT Color, AVG(ListPrice) AS AverageListPrice FROM SalesLT.PRODUCT GROUP BY Color;
 
-SELECT ProductCategoryID, SUM(StandardCost) AS TotalStandardCost FROM SalesLT.PRODUCT GROUP BY ProductCategoryID;
-
 SELECT MAX(ListPrice) AS MaxListPrice FROM SalesLT.PRODUCT WHERE DiscontinuedDate IS NOT NULL;
 
 SELECT ProductCategoryID, SUM(Weight) AS TotalWeight FROM SalesLT.PRODUCT WHERE Weight IS NOT NULL GROUP BY ProductCategoryID;
@@ -26,3 +24,5 @@ SELECT YEAR(ModifiedDate) AS Year, SUM(Weight) AS TotalWeight FROM SalesLT.PRODU
 SELECT count(*) as "prodotti venduti2002"
 FROM SalesLT.PRODUCT 
 where YEAR(SellStartDate) = 2002;
+
+SELECT MONTH(ModifiedDate) AS Year, SUM(Weight) AS TotalWeight FROM SalesLT.PRODUCT WHERE Weight IS NOT NULL GROUP BY YEAR(ModifiedDate);
