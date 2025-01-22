@@ -22,3 +22,5 @@ SELECT Name, Color FROM SalesLT.PRODUCT WHERE Color <> 'Black' AND ListPrice <= 
 SELECT Name, Color FROM SalesLT.PRODUCT WHERE Color LIKE 'R%' ORDER BY Color ASC;
 
 SELECT Name, Weight FROM SalesLT.PRODUCT WHERE Weight IS NOT NULL ORDER BY Weight ASC;
+
+SELECT Name, Weight FROM SalesLT.PRODUCT WHERE Weight IS NOT NULL ;
